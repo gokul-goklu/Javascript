@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  function Gokul(x) {
+    return x.json();
+  }
+  function Json(y) {
+    console.log(y);
+  }
+
+  function Event() {
+    console.log("Error");
+  }
+
+  fetch("https://fakestoreapi.com/products")
+    .then(Gokul)
+    .then(Json)
+    .catch(Event);
+</script>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #color {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .redd {
+        background-color: red;
+        color: white;
+        height: 100px;
+        width: 100px;
+      }
+      .bluee {
+        background-color: rgb(5, 52, 70);
+        color: white;
+        height: 100px;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="color"></div>
+    <script>
+      const numbers = [2, 3, 4, 5, 6, 7, 8, 9, 13, 42, 556, 76];
+      const getid = document.getElementById("color");
+
+      for (let i = 0; i < numbers.length; i++) {
+        const divelem = document.createElement("div");
+        console.log(getid);
+        divelem.className += " main ";
+        if (numbers[i] % 2 == 0) {
+          divelem.className += " redd ";
+        } else {
+          divelem.className += " bluee ";
+        }
+        divelem.innerText = numbers[i];
+        console.log(divelem);
+        getid.appendChild(divelem);
+      }
+    </script>
+  </body>
+</html>
