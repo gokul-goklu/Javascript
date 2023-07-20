@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #Box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .red {
+        background-color: red;
+        color: antiquewhite;
+      }
+
+      .blue {
+        background-color: aqua;
+        color: aliceblue;
+      }
+      .main {
+        height: 100px;
+        width: 100px;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Box">
+      <script>
+        const numbers = [
+          12, 2, 4, 7, 5, 34, 46, 76, 8, 89, 31, 23, 45, 65, 44, 124,
+        ];
+        const container = document.getElementById("Box");
+
+        for (let i = 0; i < numbers.length; i++) {
+          const card = document.createElement("div");
+          card.className += " main ";
+          if (numbers[i] % 2 == 0) card.className += " red ";
+          else {
+            card.className += " blue ";
+          }
+          card.innerText = numbers[i];
+          container.appendChild(card);
+
+          card.addEventListener("mouseover", function (e) {
+            const ss = e.target.innerText;
+            alert(ss);
+          });
+        }
+      </script>
+    </div>
+  </body>
+</html>

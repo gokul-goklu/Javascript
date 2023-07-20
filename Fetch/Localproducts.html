@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #Box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .red {
+        background-color: red;
+        color: antiquewhite;
+        height: 150px;
+        width: 100px;
+        padding: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="Box"></div>
+  </body>
+  <script>
+    fetch("./Products.json")
+      .then((data) => data.json())
+      .then((newData) => {
+        Particular(newData);
+      });
+
+    function Particular(abc) {
+      const Container = document.getElementById("Box");
+      for (let i = 0; i < abc.length; i++) {
+        const card = document.createElement("div");
+        card.className = "red";
+        card.innerText = abc[i].price;
+        Container.appendChild(card);
+      }
+    }
+  </script>
+</html>
