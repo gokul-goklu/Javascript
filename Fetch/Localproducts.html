@@ -24,6 +24,7 @@
   </head>
   <body>
     <div id="Box"></div>
+    <img src="" />
   </body>
   <script>
     fetch("./Products.json")
@@ -36,9 +37,12 @@
       const Container = document.getElementById("Box");
       for (let i = 0; i < abc.length; i++) {
         const card = document.createElement("div");
+        // const imge = document.createElement("img");
+        // imge.src = abc[i].image;
         card.className = "red";
         card.innerText = abc[i].price;
         Container.appendChild(card);
+        //Container.appendChild(imge);
       }
     }
   </script>
