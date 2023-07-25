@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #box {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .cardStyle {
+        height: 150px;
+        width: 150px;
+        background-color: aqua;
+        color: rgb(33, 33, 37);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script>
+      const container = document.getElementById("box");
+      for (let i = 0; i < 30; i++) {
+        const card = document.createElement("div");
+        card.className = "cardStyle";
+        card.innerText = "Its blue";
+        container.appendChild(card);
+      }
+      container.addEventListener("click", (e) => {
+        // e.target.innerText = "Now it's Orange";
+        // e.target.style.backgroundColor = "orange";
+        colorChange(e);
+      });
+      const colorChange = (e) => {
+        e.target.innerText = "Now it's Orange";
+        e.target.style.backgroundColor = "orange";
+      };
+    </script>
+  </body>
+</html>

@@ -10,11 +10,14 @@
   </body>
 </html>
 <script>
+  //First way using e
   const home = document.getElementById("home-btn");
   home.addEventListener("click", (e) => {
     e.target.innerText = "Clicked";
     e.target.style.backgroundColor = "orange";
   });
+
+  //second way using this while using this u should use normal function not arrow function
 
   //   const home = document.getElementById("home-btn");
   //   home.addEventListener("click", function () {
