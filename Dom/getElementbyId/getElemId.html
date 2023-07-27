@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .marginStyle {
+        background-color: aquamarine;
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .texting {
+        width: 40px;
+        height: 40px;
+        background-color: blueviolet;
+        color: chartreuse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+    <script>
+      const Container = document.getElementById("box");
+      const elemMargin = document.createElement("div");
+      elemMargin.className = "marginStyle";
+      const innerTxt = document.createElement("div");
+      innerTxt.className = "texting";
+      innerTxt.innerText = "Gokul";
+      elemMargin.appendChild(innerTxt);
+      Container.appendChild(elemMargin);
+    </script>
+  </body>
+</html>

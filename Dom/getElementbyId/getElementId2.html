@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="blocks"></div>
+    <script>
+      const container = document.getElementById("blocks");
+      const elem = document.createElement("div");
+      elem.style.backgroundColor = "red";
+      elem.style.color = "aqua";
+      elem.innerText = "Iam Gokul";
+      elem.style.padding = "20px";
+      elem.style.width = "70px";
+      elem.style.height = "70px";
+      elem.style.display = "flex";
+      elem.style.justifyContent = "center";
+      elem.style.alignItems = "center";
+      elem.style.borderRadius = "10px";
+      container.appendChild(elem);
+    </script>
+  </body>
+</html>
