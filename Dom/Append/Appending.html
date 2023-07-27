@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="names">
+      <div>Gokul</div>
+    </div>
+    <script>
+      const container = document.getElementById("names");
+      container.style.backgroundColor = "blue";
+      const items = ["virat", "Abde", "Glenn", "siraj"];
+      for (let i = 0; i < items.length; i++) {
+        const elem = document.createElement("div");
+        elem.innerText = items[i];
+        elem.style.color = "pink";
+        // elem.style.backgroundColor = "tomato";
+        container.appendChild(elem);
+      }
+    </script>
+  </body>
+</html>

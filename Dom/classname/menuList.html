@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      #lists {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 68px;
+        background-color: bisque;
+        padding: 12px;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="lists">
+      <li class="allList">Home</li>
+      <li class="allList">Product</li>
+      <li class="allList">Help</li>
+      <li class="allList">Support</li>
+    </ul>
+
+    <script>
+      const container = document.getElementById("lists");
+      const card = document.getElementsByClassName("allList");
+      container.addEventListener("click", (e) => {
+        e.stopPropagation();
+        e.target.style.color = "red";
+        const result = e.target.innerText;
+
+        for (let i = 0; i < card.length; i++) {
+          if (card[i].innerText != result) {
+            card[i].style.color = "blue";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
