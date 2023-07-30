@@ -1,6 +1,39 @@
-let jsonData; // Declare the variable to store the JSON data
-fetch('https://api.example.com/data') .then(response => { if (!response.ok) {
-throw new Error('Network response was not ok'); } return response.json(); })
-.then(data => { // Store the JSON data in the variable jsonData = data;
-console.log(jsonData); // Now you can use the jsonData variable elsewhere in
-your code }) .catch(error => { console.error('Fetch error:', error); });
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      :root {
+      }
+      .box-one {
+        background-color: rgb(255, 221, 0);
+        width: 80%;
+        height: 600px;
+        border: 1px solid black;
+      }
+      .box-two {
+        background-color: rgb(232, 109, 234);
+        padding: 10px;
+        width: 50%;
+        height: 180px;
+        border: 1px solid black;
+      }
+
+      /*   .box-two {
+        background-color: rgb(232, 109, 234);
+        padding: 4px;
+        width: 80px;
+        height: 180px;
+        border: 1px solid black;
+      } */
+    </style>
+  </head>
+  <body>
+    <div class="box-one">
+      <div class="box-two">Sushmitha</div>
+    </div>
+  </body>
+</html>
