@@ -29,11 +29,13 @@ const p = [
   },
 ];
 const result = p.map((item) => {
-  if (item.isActive == false) {
-    item.isActive = "not Available";
-    return item;
+  const result2 = { ...item };
+  if (result2.isActive == false) {
+    result2.isActive = "not Available";
+  } else {
+    result2.isActive = "Available";
   }
-  item.isActive = "Available";
-  return item;
+  return result2;
 });
 console.log(result);
+console.log(p);
