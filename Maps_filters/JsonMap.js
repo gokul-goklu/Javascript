@@ -30,11 +30,10 @@ const p = [
 ];
 const result = p.map((item) => {
   if (item.isActive == false) {
-    item.isActive = "Unavailable";
-    return item;
-  } else {
-    item.isActive = "Available";
+    item.isActive = "not Available";
     return item;
   }
+  item.isActive = "Available";
+  return item;
 });
 console.log(result);
