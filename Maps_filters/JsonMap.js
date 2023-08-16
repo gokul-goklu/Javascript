@@ -38,4 +38,3 @@ const result = p.map((item) => {
   }
 });
 console.log(result);
-console.log(p);
