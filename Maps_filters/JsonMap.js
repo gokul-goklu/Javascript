@@ -31,7 +31,7 @@ const p = [
 const result = p.map((item) => {
   const result2 = { ...item };
   if (result2.isActive == false) {
-    result2.isActive = "not Available";
+    result2.isActive = "Not Available";
   } else {
     result2.isActive = "Available";
   }
