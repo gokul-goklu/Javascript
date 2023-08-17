@@ -30,11 +30,12 @@ const products = [
     description: "High-resolution camera for stunning photography.",
   },
 ];
-const result = products.filter((item) => {
-  if (item.price > 500) return true;
-  if (item.category === "Electronics") return true;
-  return false;
-});
+//First way
+// const result = products.filter((item) => {
+//   if (item.price > 500) return true;
+//   if (item.category === "Electronics") return true;
+//   return false;
+// });
 //console.log(result);
 
 const result2 = products.filter(
